@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <StepLabel></StepLabel>
+    <StepLabel :hoge="userData.name"></StepLabel> //ここで子コンポーネントのpropsと連携している。
     <div>
       <form>
         <p>名前入力フォーム</p>
