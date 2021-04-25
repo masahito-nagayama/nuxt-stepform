@@ -2,12 +2,21 @@
   <div class="container">
      <!-- //ここで子コンポーネントのpropsと連携している。 -->
     <StepLabel1 :hoge="userData.name"></StepLabel1>
+    <StepLabel1 :hoge="userData.email"></StepLabel1>
+    <StepLabel1 :hoge="userData.password"></StepLabel1>
     <div>
-      <form>
+      <form @submit.prevent>
         <p>名前入力フォーム</p>
         <input type="text" v-model="userData.name">
         <button>next</button>
+        <p>メール入力フォーム</p>
+        <input type="email" v-model="userData.email">
+        <button>next</button>
+        <p>パスワード入力フォーム</p>
+        <input type="password" v-model="userData.password">
+        <button>next</button>
       </form>
+      <pre>{{ $data }}</pre>
     </div>
   </div>
 </template>
@@ -17,14 +26,21 @@ import StepLabel1 from '~/components/stepLabel1.vue'
 
 export default {
   components: {
-    StepLabe1l1,
+    StepLabel1,
   },
   data() {
     return {
       userData: {
         name: "",
+        email: "",
+        password: "",
       },
     }
+  },
+  methods: {
+    // clickSubmit() {
+    //   console.log(this.userData.name);
+    // }
   },
 }
 </script>
