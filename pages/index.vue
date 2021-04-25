@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <StepLabel :hoge="userData.name"></StepLabel> //ここで子コンポーネントのpropsと連携している。
+     <!-- //ここで子コンポーネントのpropsと連携している。 -->
+    <StepLabel1 :hoge="userData.name"></StepLabel1>
     <div>
       <form>
         <p>名前入力フォーム</p>
@@ -12,11 +13,11 @@
 </template>
 
 <script>
-import StepLabel from '~/components/stepLabel.vue'
+import StepLabel1 from '~/components/stepLabel1.vue'
 
 export default {
   components: {
-    StepLabel,
+    StepLabe1l1,
   },
   data() {
     return {
